@@ -1,12 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Panel Show Scorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
+    --font-display: 'Bebas Neue', 'Arial Narrow', 'Impact', sans-serif;
+    --font-body: 'DM Sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     --red:    #e63946;
     --red-dark: #c1121f;
     --yellow: #f4d35e;
@@ -26,7 +31,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-font-family: ‘DM Sans’, sans-serif;
+font-family: var(–font-body);
 background: var(–bg);
 color: var(–text);
 min-height: 100vh;
@@ -45,7 +50,7 @@ width: 100%; max-width: 900px;
 display: flex; align-items: center; justify-content: space-between;
 margin-bottom: 28px;
 }
-.logo { font-family: ‘Bebas Neue’, sans-serif; font-size: 2rem; letter-spacing: 2px; color: var(–gold); }
+.logo { font-family: var(–font-display); font-size: 2rem; letter-spacing: 2px; color: var(–gold); }
 .round-badge {
 background: var(–surface2);
 border: 1px solid #30363d;
@@ -67,7 +72,7 @@ flex: 1; padding: 10px;
 background: var(–surface);
 border: 1px solid #30363d;
 border-radius: 10px;
-font-family: ‘Bebas Neue’, sans-serif;
+font-family: var(–font-display);
 font-size: 1.1rem; letter-spacing: 1px;
 color: var(–muted);
 cursor: pointer;
@@ -144,7 +149,7 @@ text-transform: uppercase; opacity: 0; transition: opacity .2s;
 background: transparent;
 border: none; border-bottom: 1px dashed rgba(255,255,255,.2);
 color: var(–text);
-font-family: ‘DM Sans’, sans-serif;
+font-family: var(–font-body);
 font-size: .9rem; font-weight: 600;
 text-align: center; width: 100%;
 padding: 2px 4px;
@@ -156,7 +161,7 @@ transition: border-color .2s;
 .panel.blue   .guesser-name-input:focus { border-color: var(–blue); }
 
 .round-pts {
-font-family: ‘Bebas Neue’, sans-serif;
+font-family: var(–font-display);
 font-size: 2.8rem;
 line-height: 1;
 margin-top: 4px;
@@ -177,7 +182,7 @@ padding: 0 12px 14px;
 flex: 1;
 padding: 9px 4px;
 border: none; border-radius: 8px;
-font-family: ‘Bebas Neue’, sans-serif;
+font-family: var(–font-display);
 font-size: 1rem; letter-spacing: 1px;
 cursor: pointer;
 transition: transform .1s, filter .1s;
@@ -206,7 +211,7 @@ padding: 9px 4px;
 border: none; border-radius: 8px;
 background: var(–surface2);
 color: var(–muted);
-font-family: ‘Bebas Neue’, sans-serif;
+font-family: var(–font-display);
 font-size: .9rem; letter-spacing: 1px;
 cursor: pointer;
 transition: transform .1s, color .2s;
@@ -231,7 +236,7 @@ display: flex; flex-direction: column; align-items: center; gap: 2px;
 .total-col + .total-col { border-left: 1px solid #30363d; }
 .total-label { font-size: .65rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(–muted); }
 .total-score {
-font-family: ‘Bebas Neue’, sans-serif;
+font-family: var(–font-display);
 font-size: 2rem; letter-spacing: 2px;
 }
 .total-col:nth-child(1) .total-score { color: var(–red); }
@@ -259,7 +264,7 @@ display: none;
 }
 .wager-section.visible { display: block; }
 .wager-title {
-font-family: ‘Bebas Neue’, sans-serif;
+font-family: var(–font-display);
 font-size: 1.4rem; letter-spacing: 2px;
 color: var(–gold);
 margin-bottom: 4px;
@@ -286,7 +291,7 @@ background: var(–bg);
 border: 1px solid #30363d;
 border-radius: 8px;
 color: var(–text);
-font-family: ‘Bebas Neue’, sans-serif;
+font-family: var(–font-display);
 font-size: 1.3rem;
 text-align: center;
 padding: 6px 4px;
@@ -304,7 +309,7 @@ border: 1px solid #30363d;
 border-radius: 8px;
 background: transparent;
 color: var(–muted);
-font-family: ‘DM Sans’, sans-serif;
+font-family: var(–font-body);
 font-weight: 700; font-size: .75rem;
 cursor: pointer;
 transition: all .15s;
@@ -325,7 +330,7 @@ padding: 12px;
 border: none; border-radius: 10px;
 background: var(–gold);
 color: #000;
-font-family: ‘Bebas Neue’, sans-serif;
+font-family: var(–font-display);
 font-size: 1.1rem; letter-spacing: 2px;
 cursor: pointer;
 transition: filter .15s, transform .1s;
@@ -344,7 +349,7 @@ border: none; border-radius: 10px;
 background: var(–surface2);
 border: 1px solid #30363d;
 color: var(–text);
-font-family: ‘DM Sans’, sans-serif;
+font-family: var(–font-body);
 font-weight: 700; font-size: .9rem;
 cursor: pointer;
 transition: all .15s;
@@ -378,8 +383,8 @@ box-shadow: 0 0 60px rgba(249,199,79,.25);
 max-width: 460px; width: 90%;
 }
 .win-trophy { font-size: 4rem; margin-bottom: 8px; }
-.win-label { font-family: ‘Bebas Neue’, sans-serif; font-size: 1rem; letter-spacing: 4px; color: var(–muted); margin-bottom: 6px; }
-.win-name { font-family: ‘Bebas Neue’, sans-serif; font-size: 3.4rem; letter-spacing: 2px; color: var(–gold); line-height: 1; margin-bottom: 4px; }
+.win-label { font-family: var(–font-display); font-size: 1rem; letter-spacing: 4px; color: var(–muted); margin-bottom: 6px; }
+.win-name { font-family: var(–font-display); font-size: 3.4rem; letter-spacing: 2px; color: var(–gold); line-height: 1; margin-bottom: 4px; }
 .win-pts { font-size: 1.1rem; color: var(–muted); font-weight: 600; }
 .win-close {
 padding: 12px 32px;
@@ -387,7 +392,7 @@ border: 1px solid var(–gold);
 border-radius: 100px;
 background: transparent;
 color: var(–gold);
-font-family: ‘DM Sans’, sans-serif;
+font-family: var(–font-body);
 font-weight: 700; font-size: .95rem;
 cursor: pointer;
 transition: all .15s;
